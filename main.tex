@@ -1,0 +1,309 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    {\Huge \scshape Kalash Abhay Kala} \\ \vspace{5pt}
+    \small \raisebox{-0.1\height}\faPhone\ +91-9689153472 ~ \href{mailto:kalashkala@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{Mail}} ~ 
+    \href{https://www.linkedin.com/in/kalash-kala-477b701ba/}{\raisebox{-0.2\height}\faLinkedin\ \underline{LinkedIn}}  ~
+    \href{https://github.com/kalash-kala}{\raisebox{-0.2\height}\faGithub\ \underline{Github}}
+    % \href{https://github.com/kalash-kala}{\raisebox{-0.2\height}\fa\ \underline{Github}}
+    \hspace{8pt}
+    \href{https://leetcode.com/kalashkala/}{\faIcon{code}\underline{LeetCode}}
+    \vspace{-8pt}
+\end{center}
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C, C++, SQL} \\
+     % \textbf{Libraries}{: Networkx, NLTK, spaCy, Selenium, Pandas, Seaborn, Scikit learn, Tensorflow, PyTorch, Numpy, Scipy} \\
+     \textbf{Technologies/Frameworks}{: VERL, PyTorch, Hugging Face, LangGraph, Linux, GitHub, PowerBI, } \\
+     \textbf{Cloud Services}{: AWS (S3, Lambda, Sagemaker, SQS, Cloudwatch, RDS, Agentcore), Azure (OpenAI LLM, Document Intelligence)}}}
+ \end{itemize}
+ \vspace{-16pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+%--- IISc RESEARCH EXPERIENCE ---
+    \resumeSubheading
+    {Indian Institute of Science (IISc)}{Bengaluru, Karnataka}
+    {Research Associate -- AI/ML}{January 2026 - Present}
+    
+    \vspace{1pt}
+    \small{\textbf{Research Focus:} AI Safety, Uncertainty Estimation, and Multimodal Post-Training Alignment}
+    \vspace{-4pt}
+
+        \resumeItemListStart
+            %--- PROJECT 1 ---
+            \resumeItem{\textbf{Project: Multimodal Uncertainty Monotonicity Benchmark}}
+            \begin{itemize}[leftmargin=0.2in]
+                \resumeItem{\textbf{Developed a novel benchmark framework} evaluating multimodal LLM uncertainty along continuous, progressive ambiguity trajectories across spatial, scale, and audio dimensions.}
+                \resumeItem{\textbf{Engineered naturalistic and synthetic visual/audio QA trajectories}, validated through a human study, resulting in a manuscript \textbf{recommended for acceptance at ACL Findings}.}
+            \end{itemize}
+            
+            \vspace{2pt}
+            %--- PROJECT 2 ---
+            \resumeItem{\textbf{Project: Internal State Mis-prediction \& Risk Detection}}
+            \begin{itemize}[leftmargin=0.2in]
+                \resumeItem{\textbf{Pioneered an internal-state detection methodology} to isolate high-risk, highly confident model mis-predictions (high confidence incorrect and low confidence correct cases) across open-source LLMs.}
+                \resumeItem{\textbf{Extracted and engineered features} from hidden states, attention maps, and MLP layers to train custom classification heads, boosting AUROC from \textbf{sub-50\% to 77\%}.}
+            \end{itemize}
+            
+            \vspace{2pt}
+            %--- PROJECT 3 ---
+            \resumeItem{\textbf{Project: Multimodal Abstention \& Post-Training Alignment}}
+            \begin{itemize}[leftmargin=0.2in]
+                \resumeItem{\textbf{Architected a post-training pipeline using the verl framework} to train a multimodal LLM (Qwen-2-VL-7B) to safely abstain under structured visual ambiguity.}
+                \resumeItem{\textbf{Synthesized a custom abstention dataset} by leveraging the Segment Anything Model (SAM) to programmatically perturb visual inputs based on targeted textual queries.}
+            \end{itemize}
+        \resumeItemListEnd
+
+    %--- AUTODESK CORPORATE EXPERIENCE ---
+    \resumeSubheading
+    {Autodesk}{Bengaluru, Karnataka}
+    {Data Scientist}{July 2024 - January 2026}
+
+        \resumeItemListStart
+            \resumeItem{\textbf{Developed and deployed large scale web scraping and translation tool (WinSights)}, which scrapes and translates \textbf{50,000 websites/hour}}
+            \resumeItem{\textbf{Engineered a serverless translation pipeline} using \textbf{AWS Lambda} and open-source models to replace AWS Translate, \textbf{cutting costs from \$60,000 to \$3,200} per 100,000 websites.}
+            \resumeItem{\textbf{Scraped 1 million websites} which identified \textbf{\$1.2 million worth of sales opportunities at just \$35,000 of infrastructure cost.}}
+            \resumeItem{\textbf{Developed and deployed on AWS} a real-time Slack listener using \textbf{GPT-4.1 LLM} that automates message filtering from Autodesk forums, increasing the product team's customer doubt resolution \textbf{rate by 300\%}.}
+            \resumeItem{\textbf{Fine-tuned and deployed a DistilBERT model on AWS} for a real-time Autodesk product recommendation engine, \textbf{processing 200,000 recommendations in under 40 minutes}}
+        \resumeItemListEnd
+
+    \resumeSubSubheading{Data Science Intern}{January 2024 - June 2024}
+    
+      \resumeItemListStart
+            \resumeItem{\textbf{Developed} an \textbf{Agentic Conversational chatbot} for the sales team to get relevant information about clients or raise a ticket if facing any technical issues. This \textbf{increased sales productivity and client outreach by 30\%}}            
+            \resumeItem{\textbf{Created PowerBI Dashboard} to analyze usage of Autodesk Premier accounts credits, which includes; \textbf{Filtering, Paginated Grid, Pie Charts, Monthly and Annual Credit consumption Bar Charts, and Page Drill Through}}
+      \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+  
+%  \resumeSubHeadingListStart
+% \resumeSubheading
+%      {CiSTUP, Indian Institute of Science, Bangalore}{Bengaluru, Karnataka}
+%      {Summer Research Intern} {May 2023 - July 2023}
+%      \resumeItemListStart
+%        \resumeItem{\textbf{Developed} a bus fleet optimization model \textbf{using Genetic Algorithms} to strategically allocate buses across N depots, \textbf{maximizing profitability} while satisfying constraints on trip demand, distance, depot capacity, and vehicle type.}
+%        \resumeItem{\textbf{Automated web scraping} of Transport for London website using Selenium script made using python}
+%        \resumeItem{Created London Underground metro General Transit Feed System (GTFS) dataset which was \textbf{used to generate labeled data} for predicting the route chosen by the user. \textbf{Extensively used Pandas Library to create dataset.}}
+%        \resumeItem{\textbf{Developed Machine Learning pipeline to predict the route chosen by user} based on number of transfers, travel time and cost. Using \textbf{Tensorflow to create an artificial neural network}}
+        % \resumeItem{Developed both, classification and regression models. For the classification model, \textbf{ used the concepts of weight balancing for an imbalanced data set}. For the regression model, \textbf{used the concept of padding the data} to bring all input data to the same size}
+     % \resumeItemListEnd
+
+ 
+  % \resumeSubSubheading{Winter Research Intern}{December 2022 - January 2023}
+    
+  %   \resumeItemListStart
+  %     \resumeItem{\textbf{Designed Datasets using Pandas} based on GTFS standards to map Bangalore transit effectively}
+  %   \resumeItemListEnd
+    
+  % \resumeSubHeadingListEnd
+% \vspace{-16pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Auto Detection and Classification of Bleeding Areas in WCE Frames} $|$ \emph{Python, PyTorch}}{September 2023}
+          \resumeItemListStart
+            \resumeItem{\textbf{Achieved 96\% Accuracy} during classification of Bleeding and Non Bleeding Frames}
+            \resumeItem{\textbf{Fine Tuned a Pre-trained Two Stage object detection algorithm called Faster R-CNN} for detecting Bleeding regions in the Bleeding Frames}
+          \resumeItemListEnd 
+          \vspace{-13pt}
+      \resumeProjectHeading
+          {\textbf{Face Classification using Self Supervised Learning} $|$ \emph{Python, PyTorch}}{September 2023}
+          \resumeItemListStart
+            \resumeItem{\textbf{Outperformed transfer learning} (using Efficient\_net model) with much less labelled data}
+            \resumeItem{Achieved Similar Accuracy as Supervised Learning in \textbf{half the number of epochs}}
+            \resumeItem{Made Use of \textbf{Clustering as Pretext Task} for learning patterns from the unlabelled Face images}
+          \resumeItemListEnd 
+          % \vspace{-13pt}
+
+      % \resumeProjectHeading
+      %     {\textbf{Cipher Decryption Using Genetic Algorithm and Markov Model} $|$ \emph{Python, Natural Language Processing}}{May 2023}
+      %     \resumeItemListStart
+      %       \resumeItem{\textbf{Used Genetic Algorithm} to intelligently guess the reverse mapping of substitution cipher as closely as possible}
+      %       \resumeItem{\textbf{Used Markov model} concepts to assign probabilities to the terms (individually) and combinations of terms which can be used to calculate the log probabilities}
+      %     \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+ \resumeSubheading
+      {Indian Institute of Information Technology, Vadodara}{December 2020 -- May 2024}
+      {Bachelor of Technology in Computer Science, CPI: 8.7/10} {Gandhinagar, Gujarat}
+  \resumeSubHeadingListEnd
+
+%
+
+%-----------INVOLVEMENT---------------
+\section{Achievements}
+    \resumeSubHeadingListStart
+        
+            \resumeItemListStart
+                \resumeItem{\textbf{Selected from a highly competitive pool (5\% acceptance rate)} to present WinSights at Autodesk’s premier internal technical conference \textbf{(TechX 2025) in Las Vegas.}}
+                \resumeItem{\textbf{Selected for Amazon ML Summer School} top 3000 selects from India}
+                \resumeItem{\textbf{Finalist} in Azadi Ka Amrit Mahotsav Hackathon, \textbf{conducted by the State Government of Gujarat}}
+                \resumeItem{\textbf{First Prize} in Develop under 50 Hackathon, organised by IIIT Vadodara Technical Committee}
+                \resumeItem{\textbf{First Prize} in HackIIITV Hackathon, organised by Coding Club of IIIT Vadodara}
+                \resumeItem{\textbf{Secured Rank 960 / 20000} in LeetCode Weekly Challenge 341 (\href{https://leetcode.com/kalashkala/}{\underline{LeetCode Profile})}}
+            \resumeItemListEnd
+        
+    \resumeSubHeadingListEnd
+
+\section{Volunteering Service}
+
+    \resumeSubHeadingListStart
+
+        \resumeSubheading
+        {Datakind Singapore Chapter}{December 2022 -- December 2023}
+        {Data Science Volunteer}{}
+            \resumeItemListStart
+                \resumeItem{\textbf{Working on Container-based Action Routing Tool (CART)}. Used by Sanergy to provide routing service for sanitation workers in Kenya to optimise garbage collection, this is an \textbf{Open Source Tool}}
+                \resumeItem{\textbf{Developed a python script to convert GeoJSON file to GPX format for showing the route on the app} created by Sanergy, made use of \textbf{Pandas} and additional open source library}
+                \resumeItem{\textbf{Resolved the error caused by the recent update by debian in Dockerfile.dev}. Figured out that the error was caused due to the change of location of debian archives}
+            \resumeItemListEnd
+
+      %   \resumeSubheading
+      %     {Google Developers Students Club, IIIT Vadodara}{September 2021 -- September 2022}
+      %   {Data Structure and Algorithm Volunteer}{}
+      %       \resumeItemListStart
+      %           \resumeItem{\textbf{Took Seminars} to teach juniors basics of Data Structure and Algorithm}
+      %           \resumeItem{\textbf{Took additional Doubt sessions} for more than 50 juniors }
+      % \resumeItemListEnd
+    
+    \resumeSubHeadingListEnd
+
+\end{document}

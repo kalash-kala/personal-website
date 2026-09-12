@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalash Abhay Kala</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+<script>
+  (function () {
+    var saved = localStorage.getItem('theme');
+    var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="#top" class="brand">Kalash Kala</a>
+
+    <div class="search-box">
+      <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+        <path fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/>
+      </svg>
+      <input type="text" id="search-input" placeholder="Search..." aria-label="Search site content">
+      <button type="button" id="search-clear" aria-label="Clear search" hidden>&times;</button>
+    </div>
+
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+        <path fill="currentColor" d="M12 4.5a1 1 0 0 1-1-1V2a1 1 0 1 1 2 0v1.5a1 1 0 0 1-1 1zm0 15a1 1 0 0 1 1 1V22a1 1 0 1 1-2 0v-1.5a1 1 0 0 1 1-1zm7.5-7.5a1 1 0 0 1 1-1H22a1 1 0 1 1 0 2h-1.5a1 1 0 0 1-1-1zm-15 0a1 1 0 0 1 1 1H4a1 1 0 1 1 0-2h1.5a1 1 0 0 1 1 1zm12.02-6.02a1 1 0 0 1 0-1.41l1.06-1.06a1 1 0 1 1 1.41 1.41l-1.06 1.06a1 1 0 0 1-1.41 0zM4.99 19.02a1 1 0 0 1 0-1.41l1.06-1.06a1 1 0 1 1 1.41 1.41l-1.06 1.06a1 1 0 0 1-1.41 0zm14.02 0a1 1 0 0 1-1.41 0l-1.06-1.06a1 1 0 1 1 1.41-1.41l1.06 1.06a1 1 0 0 1 0 1.41zM7.46 6.46a1 1 0 0 1-1.41 0L4.99 5.4A1 1 0 1 1 6.4 3.99l1.06 1.06a1 1 0 0 1 0 1.41zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10z"/>
+      </svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+        <path fill="currentColor" d="M20.742 13.045a8.088 8.088 0 0 1-2.077.273c-4.508 0-8.16-3.653-8.16-8.16 0-1.276.297-2.482.826-3.555a.5.5 0 0 0-.61-.696A10.098 10.098 0 0 0 2.5 10.9c0 5.578 4.522 10.1 10.1 10.1 4.324 0 8.017-2.72 9.465-6.545a.5.5 0 0 0-.646-.639 8.07 8.07 0 0 1-.677.229z"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<div id="search-status" class="search-status" hidden></div>
+
+<div class="container" id="top">
+
+  <header class="hero">
+    <div class="avatar-wrap">
+      <img id="avatar" class="avatar" src="profile.jpg" alt="Kalash Abhay Kala"
+           onerror="this.style.display='none'; document.getElementById('avatar-fallback').style.display='flex';">
+      <div id="avatar-fallback" class="avatar avatar-fallback">KK</div>
+    </div>
+    <div class="hero-text">
+      <h1>Kalash Abhay Kala</h1>
+      <p class="tagline">Research Associate (AI/ML) at Indian Institute of Science &middot; ex&ndash;Data Scientist at Autodesk</p>
+      <nav class="links">
+        <a href="mailto:kalashkala@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/kalash-kala-477b701ba/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/kalash-kala" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://leetcode.com/kalashkala/" target="_blank" rel="noopener">LeetCode</a>
+        <a href="resume.pdf" target="_blank" rel="noopener">R&eacute;sum&eacute;</a>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="toc" aria-label="On this page">
+    <a href="#about" class="nav-link">About</a>
+    <a href="#experience" class="nav-link">Experience</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#education" class="nav-link">Education</a>
+    <a href="#achievements" class="nav-link">Achievements</a>
+    <a href="#volunteering" class="nav-link">Volunteering</a>
+  </nav>
+
+  <section id="about" data-section-name="About">
+    <h2>About</h2>
+    <div class="searchable">
+      <p>
+        Machine Learning Researcher &amp; CS Graduate specialising in the interpretability, reliability, and
+        safety of Large Language and Multimodal Models. My focus centres on LLM / Multimodal model
+        post-training techniques and probing internal model representations to build more trustworthy and
+        alignment-focused AI systems.
+      </p>
+      <p>
+        I'm a Research Associate in AI/ML at the Indian Institute of Science (IISc), Bengaluru, working on
+        AI safety, uncertainty estimation, and multimodal post-training alignment. Before this, I spent
+        about a year and a half as a Data Scientist at Autodesk, building large-scale data and ML pipelines
+        that shipped to production. I did my B.Tech in Computer Science at IIIT Vadodara.
+      </p>
+    </div>
+  </section>
+
+  <section id="experience" data-section-name="Experience">
+    <h2>Experience</h2>
+
+    <div class="entry searchable">
+      <div class="entry-head">
+        <span class="entry-title">Research Associate &mdash; AI/ML, Indian Institute of Science (IISc)</span>
+        <span class="entry-date">Jan 2026 &ndash; Present</span>
+      </div>
+      <div class="entry-sub">Bengaluru, Karnataka</div>
+      <p class="entry-note">Research focus: AI Safety, Uncertainty Estimation, and Multimodal Post-Training Alignment.</p>
+      <ul>
+        <li><strong>Multimodal Uncertainty Monotonicity Benchmark</strong> &mdash; developed a novel benchmark evaluating multimodal LLM uncertainty along continuous, progressive ambiguity trajectories across spatial, scale, and audio dimensions; engineered naturalistic and synthetic visual/audio QA trajectories, validated through a human study, resulting in a manuscript recommended for acceptance at ACL Findings.</li>
+        <li><strong>Internal State Mis-prediction &amp; Risk Detection</strong> &mdash; pioneered an internal-state detection methodology to isolate high-risk, highly confident model mis-predictions across open-source LLMs; engineered features from hidden states, attention maps, and MLP layers to train custom classification heads, boosting AUROC from sub-50% to 77%.</li>
+        <li><strong>Multimodal Abstention &amp; Post-Training Alignment</strong> &mdash; architected a post-training pipeline using the verl framework to train a multimodal LLM (Qwen-2-VL-7B) to safely abstain under structured visual ambiguity; synthesized a custom abstention dataset using SAM to programmatically perturb visual inputs based on targeted textual queries.</li>
+      </ul>
+    </div>
+
+    <div class="entry searchable">
+      <div class="entry-head">
+        <span class="entry-title">Data Scientist, Autodesk</span>
+        <span class="entry-date">Jul 2024 &ndash; Jan 2026</span>
+      </div>
+      <div class="entry-sub">Bengaluru, Karnataka</div>
+      <ul>
+        <li>Developed and deployed a large-scale web scraping and translation tool (WinSights), scraping and translating 50,000 websites/hour.</li>
+        <li>Engineered a serverless translation pipeline using AWS Lambda and open-source models to replace AWS Translate, cutting costs from $60,000 to $3,200 per 100,000 websites.</li>
+        <li>Scraped 1 million websites, identifying $1.2 million worth of sales opportunities at just $35,000 of infrastructure cost.</li>
+        <li>Built and deployed a real-time Slack listener on AWS using GPT-4.1 that automates message filtering from Autodesk forums, increasing the product team's customer doubt resolution rate by 300%.</li>
+        <li>Fine-tuned and deployed a DistilBERT model on AWS for a real-time product recommendation engine, processing 200,000 recommendations in under 40 minutes.</li>
+      </ul>
+    </div>
+
+    <div class="entry searchable">
+      <div class="entry-head">
+        <span class="entry-title">Data Science Intern, Autodesk</span>
+        <span class="entry-date">Jan 2024 &ndash; Jun 2024</span>
+      </div>
+      <ul>
+        <li>Developed an agentic conversational chatbot for the sales team to surface client information and raise support tickets, increasing sales productivity and client outreach by 30%.</li>
+        <li>Created a Power BI dashboard to analyze Autodesk Premier account credit usage, including filtering, a paginated grid, pie charts, monthly/annual consumption bar charts, and page drill-through.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" data-section-name="Projects">
+    <h2>Projects</h2>
+
+    <div class="entry searchable">
+      <div class="entry-head">
+        <span class="entry-title">Auto Detection &amp; Classification of Bleeding Areas in WCE Frames</span>
+        <span class="entry-date">Sep 2023</span>
+      </div>
+      <div class="entry-sub">Python, PyTorch</div>
+      <ul>
+        <li>Achieved 96% accuracy classifying bleeding and non-bleeding frames.</li>
+        <li>Fine-tuned a pre-trained two-stage object detection model (Faster R-CNN) to detect bleeding regions in the positive frames.</li>
+      </ul>
+    </div>
+
+    <div class="entry searchable">
+      <div class="entry-head">
+        <span class="entry-title">Face Classification using Self-Supervised Learning</span>
+        <span class="entry-date">Sep 2023</span>
+      </div>
+      <div class="entry-sub">Python, PyTorch</div>
+      <ul>
+        <li>Outperformed transfer learning (EfficientNet) with much less labelled data.</li>
+        <li>Achieved similar accuracy to supervised learning in half the number of epochs.</li>
+        <li>Used clustering as a pretext task to learn patterns from unlabelled face images.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="education" data-section-name="Education">
+    <h2>Education</h2>
+    <div class="entry searchable">
+      <div class="entry-head">
+        <span class="entry-title">Indian Institute of Information Technology, Vadodara</span>
+        <span class="entry-date">Dec 2020 &ndash; May 2024</span>
+      </div>
+      <div class="entry-sub">B.Tech in Computer Science, CPI: 8.7/10 &middot; Gandhinagar, Gujarat</div>
+    </div>
+  </section>
+
+  <section id="achievements" data-section-name="Achievements">
+    <h2>Achievements</h2>
+    <ul>
+      <li class="searchable">Selected from a highly competitive pool (5% acceptance rate) to present WinSights at Autodesk's premier internal technical conference (TechX 2025) in Las Vegas.</li>
+      <li class="searchable">Selected for Amazon ML Summer School &mdash; top 3,000 selects from India.</li>
+      <li class="searchable">Finalist, Azadi Ka Amrit Mahotsav Hackathon, conducted by the State Government of Gujarat.</li>
+      <li class="searchable">First Prize, Develop Under 50 Hackathon, organised by IIIT Vadodara Technical Committee.</li>
+      <li class="searchable">First Prize, HackIIITV Hackathon, organised by the Coding Club of IIIT Vadodara.</li>
+      <li class="searchable">Rank 960 / 20,000 in LeetCode Weekly Challenge 341 &mdash; <a href="https://leetcode.com/kalashkala/" target="_blank" rel="noopener">LeetCode profile</a>.</li>
+    </ul>
+  </section>
+
+  <section id="volunteering" data-section-name="Volunteering">
+    <h2>Volunteering</h2>
+    <div class="entry searchable">
+      <div class="entry-head">
+        <span class="entry-title">Data Science Volunteer, DataKind Singapore Chapter</span>
+        <span class="entry-date">Dec 2022 &ndash; Dec 2023</span>
+      </div>
+      <ul>
+        <li>Contributed to the Container-based Action Routing Tool (CART), an open-source tool used by Sanergy to route sanitation workers in Kenya and optimise garbage collection.</li>
+        <li>Developed a Python script to convert GeoJSON to GPX format for route display in Sanergy's app, using Pandas and other open-source libraries.</li>
+        <li>Resolved a Dockerfile.dev build error caused by a Debian archive location change.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Kalash Abhay Kala</p>
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ---- Theme toggle ----
+  const themeToggle = document.getElementById('theme-toggle');
+  themeToggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  });
+
+  // ---- Active section highlighting on scroll ----
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const setActive = (id) => {
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+    });
+  };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) setActive(entry.target.id);
+    });
+  }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+  sections.forEach(sec => observer.observe(sec));
+
+  // ---- Search ----
+  const searchInput = document.getElementById('search-input');
+  const searchClear = document.getElementById('search-clear');
+  const searchStatus = document.getElementById('search-status');
+  const allSections = document.querySelectorAll('section[id]');
+
+  function clearHighlights(root) {
+    root.querySelectorAll('mark.search-hit').forEach(m => {
+      const parent = m.parentNode;
+      parent.replaceChild(document.createTextNode(m.textContent), m);
+      parent.normalize();
+    });
+  }
+
+  function highlightText(el, query) {
+    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
+    const nodes = [];
+    let node;
+    while ((node = walker.nextNode())) nodes.push(node);
+    nodes.forEach(textNode => {
+      const text = textNode.nodeValue;
+      const idx = text.toLowerCase().indexOf(query);
+      if (idx === -1) return;
+      const before = text.slice(0, idx);
+      const match = text.slice(idx, idx + query.length);
+      const after = text.slice(idx + query.length);
+      const frag = document.createDocumentFragment();
+      if (before) frag.appendChild(document.createTextNode(before));
+      const mark = document.createElement('mark');
+      mark.className = 'search-hit';
+      mark.textContent = match;
+      frag.appendChild(mark);
+      if (after) frag.appendChild(document.createTextNode(after));
+      textNode.parentNode.replaceChild(frag, textNode);
+    });
+  }
+
+  function runSearch(rawQuery) {
+    const query = rawQuery.trim().toLowerCase();
+    searchClear.hidden = query.length === 0;
+
+    allSections.forEach(sec => clearHighlights(sec));
+
+    if (!query) {
+      allSections.forEach(sec => {
+        sec.classList.remove('section-hidden');
+        sec.querySelectorAll('.searchable').forEach(item => item.classList.remove('item-hidden'));
+      });
+      searchStatus.hidden = true;
+      return;
+    }
+
+    let totalMatches = 0;
+
+    allSections.forEach(sec => {
+      const heading = sec.querySelector('h2');
+      const headingMatches = heading ? heading.textContent.toLowerCase().includes(query) : false;
+      const items = sec.querySelectorAll('.searchable');
+      let sectionHasMatch = false;
+
+      if (headingMatches) {
+        // Heading itself matches (e.g. "Experience") — show the whole section.
+        sectionHasMatch = true;
+        totalMatches++;
+        highlightText(heading, query);
+        items.forEach(item => item.classList.remove('item-hidden'));
+      } else {
+        items.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          const matches = text.includes(query);
+          item.classList.toggle('item-hidden', !matches);
+          if (matches) {
+            sectionHasMatch = true;
+            totalMatches++;
+            highlightText(item, query);
+          }
+        });
+      }
+
+      sec.classList.toggle('section-hidden', !sectionHasMatch);
+    });
+
+    searchStatus.hidden = false;
+    searchStatus.textContent = totalMatches
+      ? `${totalMatches} match${totalMatches === 1 ? '' : 'es'} for "${rawQuery}"`
+      : `No matches for "${rawQuery}"`;
+
+    const firstVisibleSection = document.querySelector('section[id]:not(.section-hidden)');
+    if (firstVisibleSection) firstVisibleSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  searchInput.addEventListener('input', (e) => runSearch(e.target.value));
+  searchClear.addEventListener('click', () => {
+    searchInput.value = '';
+    runSearch('');
+    searchInput.focus();
+  });
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      searchInput.focus();
+    }
+    if (e.key === 'Escape' && document.activeElement === searchInput) {
+      searchInput.value = '';
+      runSearch('');
+      searchInput.blur();
+    }
+  });
+</script>
+
+</body>
+</html>
